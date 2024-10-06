@@ -49,6 +49,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const remainingValue = incomeValue - (rentValue + transportValue + groceriesValue + subscriptionsValue + leisureValue + miscellaneousValue)
 
+        if (remainingValue < 0) {
+            alert('Poor budgeting! Your expenses exceed your income.');
+            return;
+        }
+        
         // Prepare data for the pie chart
         const labels = ['Rent', 'Transport', 'Groceries', 'Subscriptions', 'Leisure', 'Miscellaneous', 'Remaining']; // 'Remaining' for the unused part of the pie
         const data = [rentValue, transportValue, groceriesValue, subscriptionsValue, leisureValue, miscellaneousValue, remainingValue]; // Assuming remaining is 100 for illustration
