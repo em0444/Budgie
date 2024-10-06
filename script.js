@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Poor budgeting! Your expenses exceed your income.');
             return;
         }
-        
+
         // Prepare data for the pie chart
         const labels = ['Rent', 'Transport', 'Groceries', 'Subscriptions', 'Leisure', 'Miscellaneous', 'Remaining']; // 'Remaining' for the unused part of the pie
         const data = [rentValue, transportValue, groceriesValue, subscriptionsValue, leisureValue, miscellaneousValue, remainingValue]; // Assuming remaining is 100 for illustration
@@ -89,3 +89,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 });
+
+function appendToResult(value) {
+    document.getElementById('result').value += value;
+}
+
+function clearResult() {
+    document.getElementById('result').value = '';
+}
+
+function calculateResult() {
+    const resultField = document.getElementById('result');
+    try {
+        resultField.value = eval(resultField.value); // Evaluate the expression
+    } catch (error) {
+        resultField.value = 'Error'; // Handle any errors
+    }
+}
