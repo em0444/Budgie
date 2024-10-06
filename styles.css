@@ -1,0 +1,30 @@
+html, body {
+    height: 100%; /* Ensures the body takes the full height of the viewport */
+    margin: 0;    /* Remove default margin */
+    font-family: 'Courier New', Courier, monospace;
+}
+#myHeader {
+    text-align: center;
+    margin-top: 5%;
+}
+.flex-container {
+    display: flex;
+    flex-flow: row wrap; /* sets both flex-direction and flex-wrap properties */
+    justify-content: center;
+    align-items: center; 
+    height: calc(75% - 32px); /* Adjust for header height */
+    gap: 5%; /* Space between the items */
+}
+button {
+    flex: 0 1 45%; /* Prevents flex item from growing, allows it to shrink, and sets the base width to 45% */
+    font-family: inherit;
+    padding: 2rem 4rem; /* Base size for desktop */
+    font-size: 3rem;
+    background-color: #65F78F;
+    cursor: pointer; /* Shows cursor on top of button */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover, button:focus {
+    background-color: #45a049;
+    transform: scale(1.05); /* Scale up on hover */
+}
