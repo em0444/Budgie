@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgie</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="script.js" defer></script> <!-- Use defer to ensure the script loads after the DOM -->
+</head>
+<body>
+    <h1 class="header">Other</h1>
+    <div class="flex-container">
+        <form>
+            <fieldset>
+                <legend>Income:</legend>
+                <!-- <label for="income">Income:</label><br> -->
+                <input type="text" id="income" name="income"><br><br>
+
+                <label for="type">Income type:</label><br>
+                <input type="radio" id="Weekly" name="type">
+                <label for="weekly">Weekly</label><br>
+                <input type="radio" id="Monthly" name="type">
+                <label for="monthly">Monthly</label><br>
+                <input type="radio" id="Annually" name="type">
+                <label for="annually">Annually</label><br><br>
+
+                <label for="expenses:">Expenses</label><br><br>
+                <label for="rent">Rent:</label><br>
+                <input type="text" id="rent" name="rent"><br><br>
+                <label for="transport">Transport:</label><br>
+                <input type="text" id="transport" name="transport"><br><br>
+                <label for="groceries">Groceries:</label><br>
+                <input type="text" id="groceries" name="groceries"><br><br>
+                <label for="subscriptions">Subscriptions:</label><br>
+                <input type="text" id="subscriptions" name="subscriptions"><br><br>
+                <label for="leisure">Leisure:</label><br>
+                <input type="text" id="leisure" name="leisure"><br><br>
+                <label for="miscellaneous">Miscellaneous:</label><br>
+                <input type="text" id="miscellaneous" name="miscellaneous"><br><br>
+                
+                <input type="submit"  value="Submit">
+            </fieldset>
+        </form>
+
+        <canvas id="myPieChart"></canvas>
+
+        <a href="main.html">
+            <button>Back</button>
+        </a>
+        
+    </div>
+    
+</body>
+</html>

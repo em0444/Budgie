@@ -3,7 +3,7 @@ html, body {
     margin: 0;    /* Remove default margin */
     font-family: 'Courier New', Courier, monospace;
 }
-#myHeader {
+.header, #suggestions {
     text-align: center;
 }
 .flex-container {

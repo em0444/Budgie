@@ -6,49 +6,56 @@
     <title>Budgie</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script src="script.js" defer></script> <!-- Use defer to ensure the script loads after the DOM -->
+    <script src="budgie.js" defer></script> <!-- Use defer to ensure the script loads after the DOM -->
 </head>
 <body>
-    <h1 id="myHeader">Budgie</h1>
-    <div class="flex-container">
-        <form>
-            <fieldset>
-                <legend>Income:</legend>
-                <!-- <label for="income">Income:</label><br> -->
-                <input type="text" id="income" name="income"><br><br>
-
-                <label for="type">Income type:</label><br>
-                <input type="radio" id="Weekly" name="type">
-                <label for="weekly">Weekly</label><br>
-                <input type="radio" id="Monthly" name="type">
-                <label for="monthly">Monthly</label><br>
-                <input type="radio" id="Annually" name="type">
-                <label for="annually">Annually</label><br><br>
-
-                <label for="expenses:">Expenses</label><br><br>
-                <label for="rent">Rent:</label><br>
-                <input type="text" id="rent" name="rent"><br><br>
-                <label for="transport">Transport:</label><br>
-                <input type="text" id="transport" name="transport"><br><br>
-                <label for="groceries">Groceries:</label><br>
-                <input type="text" id="groceries" name="groceries"><br><br>
-                <label for="subscriptions">Subscriptions:</label><br>
-                <input type="text" id="subscriptions" name="subscriptions"><br><br>
-                <label for="leisure">Leisure:</label><br>
-                <input type="text" id="leisure" name="leisure"><br><br>
-                <label for="miscellaneous">Miscellaneous:</label><br>
-                <input type="text" id="miscellaneous" name="miscellaneous"><br><br>
-                
-                <input type="submit"  value="Submit">
-            </fieldset>
-        </form>
-
-        <canvas id="myPieChart"></canvas>
-
-        <a href="main.html">
-            <button>Back</button>
-        </a>
+    <div class="flex-col">
+        <h1 class="header">Budgie</h1>
         
+        <div class="flex-container">
+            <form id="preferencesForm">
+                
+                    <label for="income">Monthly Income (£):</label>
+                    <input type="number" id="income" name="income" required><br><br><br>
+
+                    <b>Rank the following spending categories in terms of importance.</b>
+                    <p>0 being not important at all, 10 being very important.</p><br>
+            <fieldset>
+                    <label for="housingPref">Rent:</label>
+                    <input type="number" id="housingPref" name="housing" min="0" max="10" required><br><br>
+                    
+            
+                    <label for="groceriesPref">Groceries:</label>
+                    <input type="number" id="groceriesPref" name="groceries" min="0" max="10" required><br><br>
+            
+                    <label for="transportPref">Transport:</label>
+                    <input type="number" id="transportPref" name="transport" min="0" max="10" required><br><br>
+            
+                    <label for="subscriptionsPref">Subscription:</label>
+                    <input type="number" id="subscriptionsPref" name="subscriptions" min="0" max="10" required><br><br>
+            
+                    <label for="leisurePref">Leisure Activities:</label>
+                    <input type="number" id="leisurePref" name="leisure" min="0" max="10" required><br><br>
+            
+                    <label for="savingsPref">Savings:</label>
+                    <input type="number" id="savingsPref" name="savings" min="0" max="10" required><br><br>
+        
+                    <input type="submit" value="Suggest Percentages">
+                </fieldset>
+                
+            </form>
+        </div>
+            
+        
+        </div>
+        <h2 class="header">Suggested Budgetting:</h2>
+            <div id="suggestions"></div>
+
+            <canvas id="myPieChart"></canvas>
+
+            <a href="main.html">
+                <button>Back</button>
+            </a>
     </div>
     
 </body>
