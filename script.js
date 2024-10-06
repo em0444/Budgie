@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const groceriesValue = parseFloat(document.getElementById('groceries').value);
         const subscriptionsValue = parseFloat(document.getElementById('subscriptions').value);
         const leisureValue = parseFloat(document.getElementById('leisure').value);
-        const miscillanousValue = parseFloat(document.getElementById('miscillanous').value);
+        const miscellaneousValue = parseFloat(document.getElementById('miscellaneous').value);
 
         // Check if an income type was selected
         if (!incomeType) {
@@ -42,16 +42,16 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (isNaN(leisureValue) || leisureValue < 0) {
             alert('Please enter a valid leisure amount.');
             return; // Exit if invalid
-        } else if (isNaN(miscillanousValue) || miscillanousValue < 0) {
+        } else if (isNaN(miscellaneousValue) || miscellaneousValue < 0) {
             alert('Please enter a valid misciilanous amount.');
             return; // Exit if invalid
         }
 
-        const remainingValue = incomeValue - (rentValue + transportValue + groceriesValue + subscriptionsValue + leisureValue + miscillanousValue)
+        const remainingValue = incomeValue - (rentValue + transportValue + groceriesValue + subscriptionsValue + leisureValue + miscellaneousValue)
 
         // Prepare data for the pie chart
-        const labels = ['Rent', 'Transport', 'Groceries', 'Subscriptions', 'Leisure', 'Miscillanous', 'Remaining']; // 'Remaining' for the unused part of the pie
-        const data = [rentValue, transportValue, groceriesValue, subscriptionsValue, leisureValue, miscillanousValue, remainingValue]; // Assuming remaining is 100 for illustration
+        const labels = ['Rent', 'Transport', 'Groceries', 'Subscriptions', 'Leisure', 'Miscellaneous', 'Remaining']; // 'Remaining' for the unused part of the pie
+        const data = [rentValue, transportValue, groceriesValue, subscriptionsValue, leisureValue, miscellaneousValue, remainingValue]; // Assuming remaining is 100 for illustration
 
         // Create the pie chart
         const ctx = document.getElementById('myPieChart').getContext('2d');
