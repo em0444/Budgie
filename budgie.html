@@ -9,54 +9,48 @@
     <script src="budgie.js" defer></script> <!-- Use defer to ensure the script loads after the DOM -->
 </head>
 <body>
-    <div class="flex-col">
-        <h1 class="header">Budgie</h1>
-        
-        <div class="flex-container">
-            <form id="preferencesForm">
+    <h1 class="header">Budgie</h1>
+    
+    <div class="flex-container">
+        <form id="preferencesForm">
+                <label for="income">Income (£):</label>
+                <input type="number" id="income" name="income" required><br><br><br>
+
+                <b>Rank the following spending categories in terms of importance.</b>
+                <p>0 being not important at all, 10 being very important.</p><br>
+        <fieldset>
+                <label for="housingPref">Rent:</label>
+                <input type="number" id="housingPref" name="housing" min="0" max="10" required><br><br>
                 
-                    <label for="income">Income (£):</label>
-                    <input type="number" id="income" name="income" required><br><br><br>
-
-                    <b>Rank the following spending categories in terms of importance.</b>
-                    <p>0 being not important at all, 10 being very important.</p><br>
-            <fieldset>
-                    <label for="housingPref">Rent:</label>
-                    <input type="number" id="housingPref" name="housing" min="0" max="10" required><br><br>
-                    
-            
-                    <label for="groceriesPref">Groceries:</label>
-                    <input type="number" id="groceriesPref" name="groceries" min="0" max="10" required><br><br>
-            
-                    <label for="transportPref">Transport:</label>
-                    <input type="number" id="transportPref" name="transport" min="0" max="10" required><br><br>
-            
-                    <label for="subscriptionsPref">Subscription:</label>
-                    <input type="number" id="subscriptionsPref" name="subscriptions" min="0" max="10" required><br><br>
-            
-                    <label for="leisurePref">Leisure Activities:</label>
-                    <input type="number" id="leisurePref" name="leisure" min="0" max="10" required><br><br>
-            
-                    <label for="savingsPref">Savings:</label>
-                    <input type="number" id="savingsPref" name="savings" min="0" max="10" required><br><br>
         
-                    <input type="submit" value="Suggest Percentages">
-                </fieldset>
-                
-            </form>
-        </div>
-            
+                <label for="groceriesPref">Groceries:</label>
+                <input type="number" id="groceriesPref" name="groceries" min="0" max="10" required><br><br>
         
-        </div>
-        <h2 class="header">Suggested Budgetting:</h2>
-            <div id="suggestions"></div>
+                <label for="transportPref">Transport:</label>
+                <input type="number" id="transportPref" name="transport" min="0" max="10" required><br><br>
+        
+                <label for="subscriptionsPref">Subscription:</label>
+                <input type="number" id="subscriptionsPref" name="subscriptions" min="0" max="10" required><br><br>
+        
+                <label for="leisurePref">Leisure Activities:</label>
+                <input type="number" id="leisurePref" name="leisure" min="0" max="10" required><br><br>
+        
+                <label for="savingsPref">Savings:</label>
+                <input type="number" id="savingsPref" name="savings" min="0" max="10" required><br><br>
+                <div class="button-container">
+                    <input type="submit" value="Suggest Percentages" class="form-button">
+                </div>
+        </fieldset>
+            
+        </form>
 
-            <canvas id="myPieChart"></canvas>
-
-            <a href="main.html">
-                <button>Back</button>
-            </a>
+        <a href="main.html">
+            <button>Back</button>
+        </a>
     </div>
     
+    <h2 class="header">Suggested Budgetting:</h2>
+    <div id="suggestions"></div>
+        
 </body>
 </html>

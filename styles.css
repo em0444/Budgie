@@ -1,8 +1,17 @@
 html, body {
     height: 100%; /* Ensures the body takes the full height of the viewport */
-    margin: 0;    /* Remove default margin */
     font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden;
 }
+.main {
+    min-height: 100vh; /*Ensures main takes up at least full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.25); /* Scale content to 125% */
+    transform-origin: top center; /* Ensure scaling starts from the top left corner */
+}
+
 .header, #suggestions {
     text-align: center;
 }
@@ -27,6 +36,26 @@ button {
 button:hover, button:focus {
     background-color: #45a049;
     transform: scale(1.05); /* Scale up on hover */
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+.form-button {
+    background-color: #029744;
+    color: white;
+    font-family: inherit;
+    padding: 1rem 1rem; 
+    font-size: 1rem;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+    text-align: center;
+}
+.form-button:hover, .form-button:focus {
+    background-color: #02723A; /* Darker shade for hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+
 }
 #myPieChart {
     width: 100px; /* Set desired width */
