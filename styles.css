@@ -20,7 +20,7 @@ html, body {
     flex-flow: row wrap; /* sets both flex-direction and flex-wrap properties */
     justify-content: center;
     align-items: center; 
-    height: calc(60% - 32px); /* Adjust for header height */
+    /* height: calc(60% - 32px); Adjust for header height */
     gap: 5%; /* Space between the items */
     font-size: larger;
 }

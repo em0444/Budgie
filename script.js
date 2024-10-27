@@ -11,10 +11,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const incomeValue = parseFloat(document.getElementById('income').value);
         const incomeType = document.querySelector('input[name="type"]:checked'); // Get the selected radio button
         const rentValue = parseFloat(document.getElementById('rent').value);
+        const billsValue = parseFloat(document.getElementById('bills').value);
         const transportValue = parseFloat(document.getElementById('transport').value);
         const groceriesValue = parseFloat(document.getElementById('groceries').value);
         const subscriptionsValue = parseFloat(document.getElementById('subscriptions').value);
         const leisureValue = parseFloat(document.getElementById('leisure').value);
+        const shoppingValue = parseFloat(document.getElementById('shopping').value);
+        const savingsValue = parseFloat(document.getElementById('savings').value);
         const miscellaneousValue = parseFloat(document.getElementById('miscellaneous').value);
 
         // Check if an income type was selected
@@ -30,6 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (isNaN(rentValue) || rentValue < 0) {
             alert('Please enter a valid rent amount.');
             return; // Exit if invalid
+        } else if (isNaN(billsValue) || billsValue < 0) {
+            alert('Please enter a valid bills amount.');
+            return; // Exit if invalid
         } else if (isNaN(transportValue) || transportValue < 0) {
             alert('Please enter a valid transport amount.');
             return; // Exit if invalid
@@ -42,12 +48,19 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (isNaN(leisureValue) || leisureValue < 0) {
             alert('Please enter a valid leisure amount.');
             return; // Exit if invalid
+        } else if (isNaN(shoppingValue) || shoppingValue < 0) {
+            alert('Please enter a valid shopping amount.');
+            return; // Exit if invalid
+        } else if (isNaN(savingsValue) || savingsValue < 0) {
+            alert('Please enter a valid savings amount.');
+            return; // Exit if invalid
         } else if (isNaN(miscellaneousValue) || miscellaneousValue < 0) {
             alert('Please enter a valid misciilanous amount.');
             return; // Exit if invalid
         }
 
-        const remainingValue = incomeValue - (rentValue + transportValue + groceriesValue + subscriptionsValue + leisureValue + miscellaneousValue)
+        const remainingValue = incomeValue - (rentValue + billsValue + transportValue + groceriesValue + subscriptionsValue + leisureValue + 
+            shoppingValue + savingsValue + miscellaneousValue)
 
         if (remainingValue < 0) {
             alert('Poor budgeting! Your expenses exceed your income.');
@@ -55,8 +68,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Prepare data for the pie chart
-        const labels = ['Rent', 'Transport', 'Groceries', 'Subscriptions', 'Leisure', 'Miscellaneous', 'Remaining']; // 'Remaining' for the unused part of the pie
-        const data = [rentValue, transportValue, groceriesValue, subscriptionsValue, leisureValue, miscellaneousValue, remainingValue]; // Assuming remaining is 100 for illustration
+        const labels = ['Rent', 'Bills', 'Transport', 'Groceries', 'Subscriptions', 'Leisure', 'Shopping', 'Savings','Miscellaneous', 'Remaining']; // 'Remaining' for the unused part of the pie
+        const data = [rentValue, billsValue, transportValue, groceriesValue, subscriptionsValue, leisureValue, shoppingValue, savingsValue, miscellaneousValue, remainingValue]; // Assuming remaining is 100 for illustration
 
         // Create the pie chart
         const ctx = document.getElementById('myPieChart').getContext('2d');
@@ -69,7 +82,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 datasets: [{
                     label: 'Income Type Distribution',
                     data: data,
-                    backgroundColor: ['#FA6CD7', '#36A2EB', '#5540DE', '#9422BB', '#DFC1A5', '#FF6384', '#36F853'],
+                    backgroundColor: [
+                        '#36A2EB', '#5071DE', '#5540DE', '#8A50DE', '#9422BB', '#FA6CD7', '#C802F6', '#5EBE82', '#4BF4B9', '#9F9ADE'],
                     hoverOffset: 4
                 }]
             },

@@ -21,22 +21,28 @@
         <fieldset>
                 <label for="housingPref">Rent:</label>
                 <input type="number" id="housingPref" name="housing" min="0" max="10" required><br><br>
+
+                <label for="billsPref">Bills:</label>
+                <input type="number" id="billsPref" name="bills" min="0" max="10" required><br><br>
                 
-        
                 <label for="groceriesPref">Groceries:</label>
                 <input type="number" id="groceriesPref" name="groceries" min="0" max="10" required><br><br>
         
                 <label for="transportPref">Transport:</label>
                 <input type="number" id="transportPref" name="transport" min="0" max="10" required><br><br>
         
-                <label for="subscriptionsPref">Subscription:</label>
+                <label for="subscriptionsPref">Subscriptions:</label>
                 <input type="number" id="subscriptionsPref" name="subscriptions" min="0" max="10" required><br><br>
         
                 <label for="leisurePref">Leisure Activities:</label>
                 <input type="number" id="leisurePref" name="leisure" min="0" max="10" required><br><br>
+
+                <label for="shoppingPref">Shopping:</label>
+                <input type="number" id="shoppingPref" name="shopping" min="0" max="10" required><br><br>
         
-                <label for="savingsPref">Savings:</label>
+                <label for="savingsPref">Savings & Investments:</label>
                 <input type="number" id="savingsPref" name="savings" min="0" max="10" required><br><br>
+
                 <div class="button-container">
                     <input type="submit" value="Suggest Percentages" class="form-button">
                 </div>
@@ -49,8 +55,11 @@
         </a>
     </div>
     
-    <h2 class="header">Suggested Budgetting:</h2>
+    <div class="flex-container">
+        <h2 class="header">Suggested Budgetting:</h2>
+    </div>
+    
     <div id="suggestions"></div>
-        
+
 </body>
 </html>
