@@ -36,7 +36,7 @@ document.getElementById('preferencesForm').addEventListener('submit', function(e
     const transportPercentage = (transportPref / totalPreference) * incomeValue;
     const subscriptionsPercentage = (subscriptionsPref / totalPreference) * incomeValue;
     const leisurePercentage = (leisurePref / totalPreference) * incomeValue;
-    const shoppingPercentage = (savingsPref / totalPreference) * incomeValue;
+    const shoppingPercentage = (shoppingsPref / totalPreference) * incomeValue;
     const savingsPercentage = (savingsPref / totalPreference) * incomeValue;
 
     // Display the suggested percentages
