@@ -8,7 +8,7 @@ document.getElementById('preferencesForm').addEventListener('submit', function(e
     const transportPref = parseInt(document.getElementById('transportPref').value);
     const subscriptionsPref = parseInt(document.getElementById('subscriptionsPref').value);
     const leisurePref = parseInt(document.getElementById('leisurePref').value);
-    const shoppingPref = parseInt(document.getElementById('savingsPref').value);
+    const shoppingPref = parseInt(document.getElementById('shoppingPref').value);
     const savingsPref = parseInt(document.getElementById('savingsPref').value);
     
     // Create an array of preferences
@@ -36,7 +36,7 @@ document.getElementById('preferencesForm').addEventListener('submit', function(e
     const transportPercentage = (transportPref / totalPreference) * incomeValue;
     const subscriptionsPercentage = (subscriptionsPref / totalPreference) * incomeValue;
     const leisurePercentage = (leisurePref / totalPreference) * incomeValue;
-    const shoppingPercentage = (shoppingsPref / totalPreference) * incomeValue;
+    const shoppingPercentage = (shoppingPref / totalPreference) * incomeValue;
     const savingsPercentage = (savingsPref / totalPreference) * incomeValue;
 
     // Display the suggested percentages
